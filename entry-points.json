@@ -1,0 +1,29 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Hands_On_Day_2.xaml",
+      "uniqueId": "a7ea1689-ff16-4078-9fd3-2913d8879aca",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "str_FoldertoCheckPaths": {
+            "type": "string"
+          },
+          "IN_OutputFolderPath": {
+            "type": "string",
+            "x-default-expression": "@\"C:\\Users\\ahmed\\Desktop\\downloads2\\output\"",
+            "default": "C:\\Users\\ahmed\\Desktop\\downloads2\\output"
+          },
+          "in_inputFolderpath": {
+            "type": "string",
+            "x-default-expression": "@\"C:\\Users\\ahmed\\Desktop\\downloads2\\input\"",
+            "default": "C:\\Users\\ahmed\\Desktop\\downloads2\\input"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}

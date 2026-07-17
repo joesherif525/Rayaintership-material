@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #f3f4f6; 
+            background-color: #0f172a; 
+            margin: 0; 
+            padding: 20px;
+        }
+        .container { 
+            width: 100%; 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background-color: #1e293b; 
+            border: 1px solid #334155; 
+            border-radius: 16px; 
+            overflow: hidden;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+        }
+        .header { 
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%); 
+            color: white; 
+            padding: 30px 20px; 
+            text-align: center; 
+            position: relative;
+        }
+        .header img.robot {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+        .content { 
+            padding: 30px 25px; 
+        }
+        .greeting {
+            font-size: 18px;
+            color: #e2e8f0;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        /* Cool status badge with animated check */
+        .status-card {
+            background-color: #0f172a;
+            border: 1px solid #10b981;
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+        }
+        .status-card img.check {
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        .status-text {
+            font-size: 16px;
+            color: #e2e8f0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .status-badge {
+            background-color: #065f46;
+            color: #34d399;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        /* Info metadata block */
+        .meta-info {
+            font-size: 13px;
+            color: #94a3b8;
+            border-left: 3px solid #3b82f6;
+            padding-left: 12px;
+            margin-bottom: 25px;
+        }
+        .meta-info div {
+            margin-bottom: 4px;
+        }
+        .meta-info strong {
+            color: #cbd5e1;
+        }
+        /* Screenshot panel */
+        .screenshot-container {
+            background-color: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+        }
+        .screenshot-title {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        .screenshot { 
+            max-width: 100%; 
+            border-radius: 8px; 
+            border: 1px solid #1e293b;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+        .footer { 
+            font-size: 11px; 
+            color: #64748b; 
+            text-align: center; 
+            margin-top: 30px; 
+            border-top: 1px solid #334155; 
+            padding-top: 15px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with Cool Robot GIF -->
+        <div class="header">
+            <img class="robot" src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f916/512.gif" alt="Robot Helper">
+            <h1>RPA Execution Report</h1>
+        </div>
+        
+        <div class="content">
+            <p class="greeting">Hello <strong>{FirstName} {LastName}</strong>,</p>
+            
+            <!-- Status card with Check GIF -->
+            <div class="status-card">
+                <img class="check" src="https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.gif" alt="Success Check">
+                <div class="status-text">
+                    RPA process has finished with status: <span class="status-badge">{Status}</span>
+                </div>
+            </div>
+
+            <!-- Meta details -->
+            <div class="meta-info">
+                <div><strong>Executed At:</strong> {DateTime}</div>
+                
+            </div>
+            
+            <p style="color: #cbd5e1;">Your execution screenshot has been captured and compiled successfully below:</p>
+            
+            <!-- Screenshot Container -->
+            <div class="screenshot-container">
+                <div class="screenshot-title">📸 Target System Screen Capture</div>
+                <img src="cid:screenshot.png" alt="Execution Screenshot" class="screenshot"/>
+            </div>
+        </div>
+        
+        <div class="footer">
+            This is an automated operational email generated securely by your UiPath digital assistant.
+        </div>
+    </div>
+</body>
+</html>

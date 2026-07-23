@@ -1,0 +1,6 @@
+{
+  "Name": "test",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "Hands_on_1.xaml"
+}
